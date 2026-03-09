@@ -1,0 +1,20 @@
+# dbt - Fichiers générés lors de l'exécution (SQL compilé, etc.)
+target/
+dbt_packages/
+logs/
+
+# Python - Environnement et cache
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+build/
+dist/
+
+# Sécurité - JAMAIS sur Git
+.env
+profiles.yml
+
+# Divers
+.DS_Store
