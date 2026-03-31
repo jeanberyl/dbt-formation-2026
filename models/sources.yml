@@ -32,7 +32,7 @@ sources:
               - not_null
               - relationships:
                   arguments:
-                    to: source('snowflake_dbt', 'CUSTOMERS')
+                    to: source('dbt', 'CUSTOMERS')
                     field: customer_id
       - name: ORDER_ITEMS
         description: "Table des articles de commande"
