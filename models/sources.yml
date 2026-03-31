@@ -12,31 +12,15 @@ sources:
         description: "Table des catégories de produits"
       - name: CUSTOMERS
         description: "Table des clients"
-      - name: ORDERS
-        description: "Table des commandes"
-        columns:
-          - name: order_id
-            description: "Clé primaire des commandes"
-            data_tests:
-              - unique
-              - not_null
-          - name: order_status
-            description: "Statut de la commande"
-            data_tests:
-              - accepted_values:
-                  arguments:
-                    values: [1, 2, 3, 4]
-          - name: customer_id
-            description: "Référence au client"
-            data_tests:
-              - not_null
-              - relationships:
-                  arguments:
-                    to: source('dbt', 'CUSTOMERS')
-                    field: customer_id
       - name: ORDER_ITEMS
         description: "Table des articles de commande"
       - name: PRODUCTS
         description: "Table des produits"
+        columns:
+          - name: product_id
+            description: "Clé primaire des produits"
+            data_tests:
+              - unique
+              - not_null
       - name: STORES
         description: "Table des magasins"
