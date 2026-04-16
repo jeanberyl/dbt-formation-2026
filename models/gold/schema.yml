@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  # Couche Gold : transformations métier complexes
+  - name: gold_customers
+    description: "Table de couche gold des clients"
+    config:
+      database: GOLD_DBT
+    columns:
+      - name: customer_id
+        description: "Clé primaire des clients"
+      - name: first_name
+        description: "Prénom du client"
+      - name: last_name
+        description: "Nom de famille du client"
+      - name: street
+        description: "Adresse du client"
+      - name: city
+        description: "Ville du client"
+      - name: state
+        description: "État du client"
+
+  - name: gold_products
+    description: "Table de couche gold des produits"
+    config:
+      database: GOLD_DBT
+    columns:
+      - name: product_id
+        description: "Clé primaire des produits"
+      - name: product_name
+        description: "Nom du produit"
+      - name: brand_id
+        description: "Référence à la marque"
+      - name: category_id
+        description: "Référence à la catégorie"
+      - name: model_year
+        description: "Année modèle du produit"
+      - name: list_price
+        description: "Prix catalogue du produit"
+
+  - name: gold_stores
+    description: "Table de couche gold des magasins"
+    config:
+      database: GOLD_DBT
+    columns:
+      - name: store_id
+        description: "Clé primaire des magasins"
+      - name: store_name
+        description: "Nom du magasin"
+      - name: city
+        description: "Ville du magasin"
+      - name: state
+        description: "État du magasin"
+
