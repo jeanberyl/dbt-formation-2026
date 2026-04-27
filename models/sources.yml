@@ -1,9 +1,9 @@
 version: 2
 
 sources:
-  - name: dbt
+  - name: SNOWFLAKE_DBT
     description: "Sources de données du système Snowflake DBT"
-    database: DBT
+    database: SNOWFLAKE_DBT
     schema: PUBLIC
     tables:
       - name: BRANDS
